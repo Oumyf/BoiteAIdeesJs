@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boite A Idées</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <form>
+        <div class="mb-3">
+            <label for="libelle" class="form-label">Libellé</label>
+            <input type="text" class="form-control" id="libelle" placeholder="cdejj">
+            <span id="errorLibelle" class="text-danger"></span>
+        </div>
+        <select class="form-select" aria-label="Categorie" id="categorie">
+            <option selected>Choisissez une catégorie</option>
+            <option value="Politique">Politique</option>
+            <option value="Santé">Santé</option>
+            <option value="Education">Éducation</option>
+            <option value="Sport">Sport</option>
+        </select>
+        <span id="errorCategorie" class="text-danger"></span>
+        <div class="mb-3">
+            <label for="message_descriptif" class="form-label">Message descriptif</label>
+            <textarea class="form-control" id="message_descriptif" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
+    <table class="table" id="crudTable">
+        <thead>
+            <tr>
+                <th>Libellé</th>
+                <th>Catégorie</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les données seront ajoutées ici par JavaScript -->
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
